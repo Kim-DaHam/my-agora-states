@@ -1,7 +1,11 @@
+import Header from '../../Components/Header/Header'
+
+import './Main.css'
+
 function Main() {
     return (
-        <div>
-            <h1>MainPage</h1>
+        <div className='Main'>
+            <Header/>
         </div>
     )
 }
