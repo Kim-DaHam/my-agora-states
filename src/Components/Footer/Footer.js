@@ -1,7 +1,11 @@
+import './Footer.css'
+
 function Footer() {
     return (
-        <div>
-            <h1>Footer</h1>
+        <div className='Footer'>
+            <footer class="footer">
+                CodeStates
+            </footer>
         </div>
     )
 }
