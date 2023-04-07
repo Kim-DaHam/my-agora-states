@@ -1,4 +1,4 @@
-const {discussionsController} = require('../controller/discussionsController');
+const {discussionsController} = require('../controller/discussionController');
 const {findAll, findById} = discussionsController;
 const express = require('express');
 const router = express.Router();

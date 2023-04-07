@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-
 const cors = require('cors');
 const morgan = require('morgan');
 
@@ -9,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 const port = 4000;
-const discussionsRouter = require('./router/discussions');
+const discussionsRouter = require('./router/discussionsRouter');
 
 app.use('/discussions', discussionsRouter);
 
