@@ -5,16 +5,19 @@ import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Profile from '../../Components/Main/Profile/Profile'
 import Category from '../../Components/Main/Category/Category'
+import Discussion from '../../Components/Discussion/Discussion'
 
 import './Main.css'
 
 function Main() {
-    const [recentDiscussions, setRecentDiscussion] = useState([]);
+    const [recentDiscussions, setRecentDiscussions] = useState([]);
     const [hotTopics, setHotTopics] = useState([]);
 
     useEffect(()=>{
-
-    })
+        call("/discussions/recent", "GET").then((res)=>{
+            setRecentDiscussions(res);
+        })
+    },[])
 
     return (
         <div className='Main'>
@@ -50,7 +53,9 @@ function Main() {
                         <div className="recent__discussion__wrapper">
                             <ul className="recent-discussion-list">
                                 {
-
+                                    recentDiscussions.map((discussion, idx)=>{
+                                        return <li key={idx}><Discussion data={discussion}/></li>
+                                    })
                                 }
                             </ul>
                             <a className="more__link" href="/board?category=전체질문&page=1">더 알아보기 ></a>
