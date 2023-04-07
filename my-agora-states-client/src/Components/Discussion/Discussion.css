@@ -6,22 +6,23 @@
     display: flex;
 }
 
-.discussion__avatar--wrapper {
+.discussion__avatar__wrapper {
     width: fit-content;
 }
 
-.discussion__avatar--wrapper img {
+.discussion__avatar__wrapper img {
     height: 50px;
     border-radius: 70%;
 }
 
 .discussion__content {
-    width: 90%;
+    width:88%;
     /* border: solid 1px red; */
     margin-left: 15px;
     color: var(--color-text);
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     white-space: nowrap;
 }
 
