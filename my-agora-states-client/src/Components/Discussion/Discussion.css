@@ -1,0 +1,51 @@
+.discussion__container {
+    width: 100%;
+    border-bottom: 1px solid var(--color-footer-border);
+    padding: 12px;
+    padding-left: 15px;
+    display: flex;
+}
+
+.discussion__avatar--wrapper {
+    width: fit-content;
+}
+
+.discussion__avatar--wrapper img {
+    height: 50px;
+    border-radius: 70%;
+}
+
+.discussion__content {
+    width: 90%;
+    /* border: solid 1px red; */
+    margin-left: 15px;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.discussion__title {
+    width: 100%;
+    font-size: 1.1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.discussion__title:hover {
+    text-decoration: underline;
+}
+
+.discussion__info {
+    /* border: solid 1px purple; */
+    display: flex;
+    font-size: 0.9rem;
+}
+
+.discussion__author {
+    margin-right: 20px;
+}
+
+.discussion__date {
+    color: var(--color-date-text);
+}

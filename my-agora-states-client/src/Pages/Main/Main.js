@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { call } from '../../service/ApiService.js'
 
 import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
@@ -8,6 +9,13 @@ import Category from '../../Components/Main/Category/Category'
 import './Main.css'
 
 function Main() {
+    const [recentDiscussions, setRecentDiscussion] = useState([]);
+    const [hotTopics, setHotTopics] = useState([]);
+
+    useEffect(()=>{
+
+    })
+
     return (
         <div className='Main'>
             <Header/>
@@ -37,22 +45,25 @@ function Main() {
                 </section>
 
                 <section className="mini__board__container">
-                    <section className="recent__question__container grid__item">
+                    <section className="recent__discussion__container grid__item">
                         <label>최근 올라온 질문</label>
-                        <div className="recent__question__wrapper">
-                            {/* <ul className="recent-question-list">
+                        <div className="recent__discussion__wrapper">
+                            <ul className="recent-discussion-list">
+                                {
+
+                                }
                             </ul>
-                            <a className="more-link" href="/board?category=전체질문&page=1">더 알아보기 ></a> */}
+                            <a className="more__link" href="/board?category=전체질문&page=1">더 알아보기 ></a>
                         </div>
                     </section>
-                    <section className="hot_topic grid__item">
+                    <section className="hot__topic__container grid__item">
                         <div className="grid__item">
                             <label>이번주 HOT 토픽! 가장 많은 사람들이 고민한 질문이에요.</label>
-                            {/* <div className="hotTopic-container">
-                                <ul className="hotTopic-list">
+                            <div className="hot__topic__wrapper">
+                                <ul className="hot__topic__list">
                                 </ul>
-                                <a className="more-link">더 알아보기 ></a>
-                            </div> */}
+                                <a className="more__link">더 알아보기 ></a>
+                            </div>
                         </div>
                         <div className="grid-item">
                             {/* <div>
