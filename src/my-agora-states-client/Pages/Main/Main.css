@@ -67,7 +67,7 @@
 
 /* Mini Board */
 
-.mini-board-container {
+.mini__board__container {
   width: 100%;
   height: auto;
   margin-bottom: 80px;
@@ -79,11 +79,11 @@
   /* border: solid 1px blue; */
 }
 
-.mini-board-left {
+.recent__question__container {
   width: 100%;
 }
 
-.mini-board-right {
+.hot_topic {
   width: 800px;
   display: grid;
   grid-template-columns: 1fr;
@@ -91,11 +91,11 @@
   align-items: stretch;
 }
 
-.mini-board-right .grid__item{
+.hot_topic .grid__item{
   height: fit-content;
 }
 
-.mini-board-right .grid__item:nth-child(2) {
+.hot_topic .grid__item:nth-child(2) {
   height: 270px;
   padding: 20px;
   border: solid 1px var(--color-box-border);
@@ -103,9 +103,10 @@
   color: var(--color-text);
 }
 
+
 /* how to use */
 
-.how-to-use {
+.how__to__use {
   width: 98%;
   height: auto;
   padding: 30px 25px;
@@ -114,13 +115,13 @@
   border-radius: 10px;
 }
 
-.how-to-use p {
+.how__to__use p {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
-.how-to-use li {
+.how__to__use li {
   list-style: inside;
   margin-bottom: 5px;
   font-size: 1.1rem;

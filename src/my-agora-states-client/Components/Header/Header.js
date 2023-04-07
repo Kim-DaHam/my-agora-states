@@ -17,7 +17,7 @@ function Header() {
                         <input
                             type="text"
                             placeholder="Search question"
-                            className="header__searchbar"/>
+                            className="header__searchInput"/>
                     </div>
                 </div>
                 <div className="header__right__section">
