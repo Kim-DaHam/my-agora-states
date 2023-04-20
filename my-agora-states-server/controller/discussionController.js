@@ -17,17 +17,25 @@ const discussionsController = {
   },
 
   findByCategory: (req, res) => {
-    const { category } = req.params;
+    const { category, count } = req.params;
 
     let filteredDiscussions = [];
 
     if(category === 'recent'){
-      for(let i=0; i<8; i++){
+      for(let i=0; i<count; i++){
         filteredDiscussions.push(discussionsData[i]);
       }
     }
-    if(category === 'hotTopic'){
 
+    if(category === 'hotTopic'){
+      const hotTopics = discussionsData.filter((discussion)=>{
+        if(discussion.answer !== null && discussion.answer.length >= 5)
+          return true;
+        else return false;
+      })
+      for(let i=0; i<count; i++) {
+        filteredDiscussions.push(hotTopics[i]);
+      }
     }
 
     return res.status(200).json(filteredDiscussions);
