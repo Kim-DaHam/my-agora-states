@@ -9,13 +9,19 @@ import Discussion from '../../Components/Discussion/Discussion'
 
 import './Main.css'
 
+const MINI_RECENT_DISCUSSION = 8;
+const MINI_HOT_TOPIC = 5;
+
 function Main() {
     const [recentDiscussions, setRecentDiscussions] = useState([]);
     const [hotTopics, setHotTopics] = useState([]);
 
     useEffect(()=>{
-        call("/discussions/recent", "GET").then((res)=>{
+        call(`/discussions/recent/${MINI_RECENT_DISCUSSION}`, "GET").then((res)=>{
             setRecentDiscussions(res);
+        })
+        call(`/discussions/hotTopic/${MINI_HOT_TOPIC}`,"GET").then((res)=>{
+            setHotTopics(res);
         })
     },[])
 
@@ -58,7 +64,7 @@ function Main() {
                                     })
                                 }
                             </ul>
-                            <a className="more__link" href="/board?category=전체질문&page=1">더 알아보기 ></a>
+                            <a className="more__link" href={`/board?category=전체질문&page=1`}>더 알아보기 {`>`}</a>
                         </div>
                     </section>
                     <section className="hot__topic__container grid__item">
@@ -66,8 +72,15 @@ function Main() {
                             <label>이번주 HOT 토픽! 가장 많은 사람들이 고민한 질문이에요.</label>
                             <div className="hot__topic__wrapper">
                                 <ul className="hot__topic__list">
+                                {
+                                    hotTopics.map((discussion, idx)=>{
+                                        if(idx < 5)
+                                            return <li key={idx}><Discussion data={discussion}/></li>
+                                    })
+                                }
                                 </ul>
-                                <a className="more__link">더 알아보기 ></a>
+                                <a className="more__link"
+                                href={`/board?hotTopic=전체질문&page=1`}>더 알아보기 {`>`}</a>
                             </div>
                         </div>
                         <div className="grid-item">
@@ -81,9 +94,15 @@ function Main() {
                 <section className="how__to__use">
                     <p>아고라 스테이츠 이용 전 꿀팁 가이드 💡✨</p>
                     <ul>
-                        <li>어떤 질문이 좋은 질문일까요? 알아보기 쉬운 질문 작성법을 알려드릴게요.</li>
-                        <li>이용 전 알아야 할 아고라 스테이츠 기본 규칙에 대해 알아보세요 :)</li>
-                        <li>내가 알고있는 걸 쉽게 풀어 설명하는 게 어려우신가요? 그 방법을 알려드릴게요.</li>
+                        <li>
+                            <a href="https://github.com/codestates-seb/agora-states-fe/discussions/2">어떤 질문이 좋은 질문일까요? 알아보기 쉬운 질문 작성법을 알려드릴게요 :{`)`}</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/codestates-seb/agora-states-fe/discussions/6">이용 전 알아야 할 아고라 스테이츠 기본 규칙에 대해 알아보세요 :{`)`}</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/codestates-seb/agora-states-fe/discussions/4">내가 알고있는 걸 쉽게 풀어 설명하는 게 어려우신가요? 그 방법을 알려드릴게요 :{`)`}</a>
+                        </li>
                     </ul>
                 </section>
             </div>

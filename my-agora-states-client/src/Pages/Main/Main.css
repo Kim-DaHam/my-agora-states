@@ -17,6 +17,7 @@
 }
 
 
+
 /* intro */
 
 .intro__container {
@@ -154,4 +155,8 @@
   list-style: inside;
   margin-bottom: 5px;
   font-size: 1.1rem;
+}
+
+.how__to__use a:hover {
+  text-decoration: underline;
 }
