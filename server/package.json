@@ -1,8 +1,8 @@
 {
-  "name": "my-agora-states-server",
+  "name": "server",
   "version": "0.1.0",
   "scripts": {
-    "client": "cd ../my-agora-states-client && npm start",
+    "client": "cd ../client && npm start",
     "server": "nodemon app.js",
     "dev": "concurrently \"npm run client\" \"npm run server\""
   },
