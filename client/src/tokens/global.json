@@ -248,12 +248,20 @@
         }
       },
     "borderRadius": {
+        "0": {
+          "value": 0,
+          "type": "borderRadius"
+        },
         "8": {
           "value": 8,
           "type": "borderRadius"
         },
-        "base": {
-          "value": 4,
+        "30": {
+          "value": 30,
+          "type": "borderRadius"
+        },
+        "70": {
+          "value": 70,
           "type": "borderRadius"
         }
       },
