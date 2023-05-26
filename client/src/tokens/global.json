@@ -106,10 +106,6 @@
         }
       },
     "Label": {
-        "fontFamily": {
-          "value": "Noto Sans KR",
-          "type": "fontFamilies"
-        },
         "fontWeight": {
           "value": "Bold",
           "type": "fontWeights"
@@ -144,10 +140,6 @@
         }
       },
     "Body": {
-        "fontFamily": {
-          "value": "Noto Sans KR",
-          "type": "fontFamilies"
-        },
         "fontWeight": {
           "value": "Regular",
           "type": "fontWeights"
