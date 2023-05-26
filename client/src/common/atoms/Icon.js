@@ -1,5 +1,5 @@
 import * as Icons from "react-icons/bs";
-import globalToken from '../../../../src/tokens/global.json';
+import globalToken from '../../../src/tokens/global.json';
 import { styled } from 'styled-components';
 
 const { Primary, White } = globalToken;
@@ -36,7 +36,7 @@ export const iconNames = [
 ];
 
 export const Icon = ({ icon, mode, size, ...rest }) => {
-    console.log(Icons)
+
     const FeatherIcon = styled(Icons[icon])`
         color: ${(props) => props.mode === 'DarkMode' ? White.value : Primary.value};
     `;
