@@ -311,18 +311,36 @@
           "type": "textDecoration"
         }
       },
-    "divideBorderBottom": {
+      "divideBorderBottom": {
         "color": {
-        "value": "#d9d9d9",
-        "type": "color"
+          "value": "#d9d9d9",
+          "type": "color"
         },
         "width": {
-        "value": 2,
-        "type": "dimension"
+          "value": 2,
+          "type": "dimension"
         },
         "style": {
-        "value": "solid",
-        "type": "strokeStyle"
+          "value": "solid",
+          "type": "strokeStyle"
         }
-    }
+      },
+      "Size":{
+        "40": {
+          "value": 40,
+          "type": "dimension"
+        },
+        "50": {
+          "value": 50,
+          "type": "dimension"
+        },
+        "100": {
+          "value": 100,
+          "type": "dimension"
+        },
+        "200": {
+          "value": 200,
+          "type": "dimension"
+        }
+      }
 }
