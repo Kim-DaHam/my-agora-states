@@ -13,6 +13,10 @@
       "value": "#24292f",
       "type": "color"
     },
+    "Accent": {
+      "value": "#39414a",
+      "type": "color"
+    },
     "Black": {
         "value": "#000000",
         "type": "color"
