@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { styled, css } from 'styled-components';
-import globalToken from '../../tokens/global.json';
+import globalToken from '../../../tokens/global.json';
 import { Icon } from './Icon';
 
 const { Spacing, borderRadius, Gray, White } = globalToken;
