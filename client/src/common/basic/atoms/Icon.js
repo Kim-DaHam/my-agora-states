@@ -1,5 +1,5 @@
 import * as Icons from "react-icons/bs";
-import globalToken from '../../../src/tokens/global.json';
+import globalToken from '../../../tokens/global.json';
 import { styled } from 'styled-components';
 
 const { Primary, White } = globalToken;
