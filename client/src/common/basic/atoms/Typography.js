@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
-import globalToken from '../../tokens/global.json';
-import { mapStyle } from '../utils/mapStyle';
+import globalToken from '../../../tokens/global.json';
+import { mapStyle } from '../../utils/mapStyle';
 
 const { Heading, Label, Body } = globalToken;
 
