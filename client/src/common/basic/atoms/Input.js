@@ -16,6 +16,10 @@ const InputContainer = styled.div`
     padding: ${Spacing.base.value}px ${Spacing[12].value}px;
     border: 1px solid ${Gray[600].value};
     border-radius: ${borderRadius[8].value}px;
+
+    &:focus-within{
+        background-color: ${White.value};
+    }
 `;
 
 const InputStyle = styled.input`
@@ -32,17 +36,23 @@ const InputStyle = styled.input`
         color: ${Gray[600].value};
     }
 
-    &:focus{
-        width: 20rem;
-        background-color: ${White.value};
+    ${(props)=>
+        props.primary
+            && css`
+                &:focus{
+                    width: 20rem;
+                    background-color: ${White.value};
+                }
+            `
     }
+
 `;
 
-export const Input = ({icon, placeholder, ...rest}) => {
+export const Input = ({primary, icon, placeholder, ...rest}) => {
     return (
-        <InputContainer gap={Spacing[12].value} {...rest}>
+        <InputContainer primary={primary} gap={Spacing[12].value} {...rest}>
             {icon && <Icon icon={icon}/>}
-            <InputStyle placeholder={placeholder}/>
+            <InputStyle primary={primary} placeholder={placeholder}/>
         </InputContainer>
     )
 }
