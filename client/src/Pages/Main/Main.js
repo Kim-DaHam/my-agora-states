@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { call } from '../../common/utils/ApiService.js'
+import { css, styled } from 'styled-components';
 
-import Footer from '../../Components/Footer/Footer'
 import Profile from '../../Components/Main/Profile/Profile'
 import Category from '../../Components/Main/Category/Category'
 import Discussion from '../../Components/Discussion/Discussion'
@@ -104,8 +104,6 @@ function Main() {
                     </ul>
                 </section>
             </div>
-
-            <Footer/>
         </div>
     )
 }
