@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 
 const { borderRadius } = globalToken;
 
-export const Image = ({ url, size, radius, ...rest }) => {
+export const Image = ({ url, alt, size, radius, ...rest }) => {
 
     const ImageContainer = styled.div`
         width: ${(props)=>props.size}px;
@@ -20,7 +20,7 @@ export const Image = ({ url, size, radius, ...rest }) => {
 
     return (
         <ImageContainer size={size} radius={radius}>
-            <FeatherImage src={url} {...rest}/>
+            <FeatherImage src={url} alt={alt} {...rest}/>
         </ImageContainer>
         );
 }

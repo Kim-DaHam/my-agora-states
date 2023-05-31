@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import { call } from '../../service/ApiService.js'
+import { call } from '../../common/utils/ApiService.js'
+import { css, styled } from 'styled-components';
 
-import Header from '../../Components/Header/Header'
-import Footer from '../../Components/Footer/Footer'
 import Profile from '../../Components/Main/Profile/Profile'
 import Category from '../../Components/Main/Category/Category'
 import Discussion from '../../Components/Discussion/Discussion'
@@ -27,7 +26,6 @@ function Main() {
 
     return (
         <div className='Main'>
-            <Header/>
             <div className="contents__area">
                 <section className="intro__container">
                     <div className="grid__item">
@@ -106,8 +104,6 @@ function Main() {
                     </ul>
                 </section>
             </div>
-
-            <Footer/>
         </div>
     )
 }
