@@ -8,6 +8,8 @@ import Discussion from '../../Components/Discussion/Discussion'
 
 import './Main.css'
 
+import { Container, Wrapper} from '../../style/Containers.styled';
+
 const MINI_RECENT_DISCUSSION = 8;
 const MINI_HOT_TOPIC = 5;
 
@@ -25,8 +27,8 @@ function Main() {
     },[])
 
     return (
-        <div className='Main'>
-            <div className="contents__area">
+        <Container>
+            <Wrapper>
                 <section className="intro__container">
                     <div className="grid__item">
                         <div className="intro__codestates">
@@ -103,8 +105,8 @@ function Main() {
                         </li>
                     </ul>
                 </section>
-            </div>
-        </div>
+            </Wrapper>
+        </Container>
     )
 }
 

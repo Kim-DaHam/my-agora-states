@@ -1,22 +1,3 @@
-.Main {
-  width: 100vw;
-  height: auto;
-  background-color: var(--color-night-bg);
-}
-
-.contents__area {
-  width: 80%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-}
-
-.grid__item {
-  /* border: solid 1px pink; */
-}
-
-
 
 /* intro */
 

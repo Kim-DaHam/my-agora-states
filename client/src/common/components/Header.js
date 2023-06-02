@@ -1,6 +1,7 @@
 import {Link} from 'react-router-dom';
 import { css, styled } from 'styled-components';
 import globalToken from '../../tokens/global.json'
+import '../data/global-style.css'
 
 import { Image } from '../basic/atoms/Image'
 import { Input } from '../basic/atoms/Input'
@@ -16,17 +17,19 @@ const HeaderContainer = styled.div`
 
     display: flex;
     align-items: center;
+    background-color: var(--color-night-bg);
 `;
 
 function Header() {
     return (
         <HeaderContainer>
             <Link to="/">
-                <Image url="/images/small-logo-white.png" alt="header_logo_img"/>
+                <Image url="/images/small-logo-white.png" alt="header_logo_img" size={8} radius={0}/>
             </Link>
             <Input primary={true} placeholder="Search question"/>
             <Icon icon='BsBellFill'/>
-            <Image url="/images/profile.png" alt="profile_img"/>
+            <Image url="/images/profile.png" alt="profile_img"
+            size={30} radius={0}/>
         </HeaderContainer>
     )
 }
